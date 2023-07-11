@@ -1,4 +1,4 @@
 (library
  (public_name sum))
 
-(env (_ (odoc (content_only))))
+(env (_ (odoc (format json))))
