@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+        nav li {
+            display: inline;
+        }
+        nav li:not(:last-child):after {
+            content: ">";
+        }
+
+        body {
+            font-family: sans-serif;
+
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+  </head>
+          
+  <body>
+    <header>
+      <nav>
+        <ul>
+        {% for b in page.odoc.breadcrumbs %}
+        <li>
+          <a href="{{ b.href }}">
+            {{ b.name }}
+          </a>
+        </li>
+        {% endfor %}
+        </ul>
+      </nav>
+    </header>
+  
+    <main>
+        {{ page.odoc.preamble }}
+  
+        {{ page.odoc.content }}
+    </main>
+  </body>
+</html>

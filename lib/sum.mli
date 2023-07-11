@@ -1,6 +1,9 @@
+(** Different ways to sum things *)
+
 module type S = sig
   type t
 
+  (** Sum everything *)
   val sum : t list -> t
 end
 
